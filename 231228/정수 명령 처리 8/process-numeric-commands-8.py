@@ -125,6 +125,6 @@ for _ in range(n):
         doubleLinkedList.size()
     elif arr[0] == "empty":
         if doubleLinkedList.empty() == True:
-            print(0)
-        else: 
             print(1)
+        else: 
+            print(0)
