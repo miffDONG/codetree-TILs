@@ -1,5 +1,4 @@
 import sys
-# input = sys.stdin.readline()
 
 class Node:
     def __init__(self,data):
@@ -79,7 +78,6 @@ iter = DL.end()
 
 for i in range(m):
     s = sys.stdin.readline()
-    # print(s[0])
     if s[0] == "L":
         if iter != DL.begin():
             iter = iter.prev
@@ -93,7 +91,6 @@ for i in range(m):
             iter = DL.erase(iter)
 
     elif s[0] == "P":
-        # inserted = list(s.split())[1]
         DL.insert(iter,s[2])
         iter.prev
 
