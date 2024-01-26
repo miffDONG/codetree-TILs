@@ -1,5 +1,5 @@
 import sys
-input = sys.stdin.readline
+# input = sys.stdin.readline()
 
 class Node:
     def __init__(self,data):
@@ -78,16 +78,17 @@ for i in str:
 iter = DL.end()
 
 for i in range(m):
-    s = input()
-    if s == "L":
+    s = sys.stdin.readline()
+    # print(s[0])
+    if s[0] == "L":
         if iter != DL.begin():
             iter = iter.prev
 
-    elif s == "R":
+    elif s[0] == "R":
         if  iter != DL.end():
             iter = iter.next
     
-    elif s == "D":
+    elif s[0] == "D":
         if iter != DL.end():
             iter = DL.erase(iter)
 
