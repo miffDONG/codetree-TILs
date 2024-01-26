@@ -56,7 +56,7 @@ class DoublyLinkedList:
         else:
             new_node = Node(new_data)
             new_node.prev = node.prev
-            new_node.next = node.next
+            new_node.next = node
             node.prev.next = new_node
             node.prev = new_node
 
