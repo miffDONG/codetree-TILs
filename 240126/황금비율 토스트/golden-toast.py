@@ -77,7 +77,7 @@ for i in str:
 iter = DL.end()
 
 for _ in range(m):
-    s = sys.stdin.readline()
+    s = import()
     if s.startswith("L"):
         if iter != DL.begin():
             iter = iter.prev
