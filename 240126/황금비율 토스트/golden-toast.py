@@ -89,8 +89,8 @@ for i in range(m):
             iter = DL.erase(iter)
 
     elif s[0] == "P":
-        inserted = list(s.split())[1]
-        DL.insert(iter,inserted)
+        # inserted = list(s.split())[1]
+        DL.insert(iter,s[2])
         iter.prev
 
 
