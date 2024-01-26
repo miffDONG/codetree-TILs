@@ -90,9 +90,8 @@ for _ in range(m):
         if iter != DL.end():
             iter = DL.erase(iter)
 
-    elif s[0] == "P":
+    else:
         DL.insert(iter,s[2])
-        iter.prev
 
 
 iter = DL.begin()
