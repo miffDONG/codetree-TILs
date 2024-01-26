@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 class Node:
     def __init__(self,data):
         self.data = data
