@@ -78,15 +78,15 @@ iter = DL.end()
 
 for _ in range(m):
     s = sys.stdin.readline()
-    if s[0] == "L":
+    if s.startswith("L"):
         if iter != DL.begin():
             iter = iter.prev
 
-    elif s[0] == "R":
+    elif s.startswith("R"):
         if  iter != DL.end():
             iter = iter.next
     
-    elif s[0] == "D":
+    elif s.startswith("D"):
         if iter != DL.end():
             iter = DL.erase(iter)
 
