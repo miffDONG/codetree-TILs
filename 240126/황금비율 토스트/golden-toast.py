@@ -69,14 +69,14 @@ class DoublyLinkedList:
     
 n,m = map(int,input().split())
 str = input()
-DL = DoublyLinkedList()
 
+DL = DoublyLinkedList()
 for i in str:
     DL.push_back(i)
 
 iter = DL.end()
 
-for i in range(m):
+for _ in range(m):
     s = sys.stdin.readline()
     if s[0] == "L":
         if iter != DL.begin():
@@ -92,7 +92,7 @@ for i in range(m):
 
     elif s[0] == "P":
         DL.insert(iter,s[2])
-        # iter.prev
+        iter.prev
 
 
 iter = DL.begin()
