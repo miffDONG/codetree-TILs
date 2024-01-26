@@ -92,7 +92,7 @@ for i in range(m):
 
     elif s[0] == "P":
         DL.insert(iter,s[2])
-        iter.prev
+        # iter.prev
 
 
 iter = DL.begin()
