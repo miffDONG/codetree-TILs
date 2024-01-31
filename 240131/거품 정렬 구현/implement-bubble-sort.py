@@ -1,7 +1,4 @@
-import copy
-
 def bubble_sort(arr):
-    # a = copy.deepcopy(arr)
     sorted = True
     length = len(arr)
     cycle = 1
@@ -26,6 +23,6 @@ n = int(input())
 
 m = list(map(int,input().split()))
 
-bubble = bubble_sort(m)
-for i in bubble:
+bubble_sort(m)
+for i in m:
   print(i,end=" ")
