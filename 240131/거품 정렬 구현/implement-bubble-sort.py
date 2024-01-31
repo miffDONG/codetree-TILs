@@ -1,18 +1,3 @@
-# function bubble_sort(arr[])
-#   set len = arr.size
-#   set sorted = true
-  
-#   do {
-#     sorted = true
-#     for i = 0 ... i < len - 1
-#       if a[i] > a[i + 1]
-#         set tmp = a[i]
-#         a[i] = a[i + 1]
-#         a[i + 1] = tmp
-#         sorted = false
-#   } while (sorted == false)
-  
-#   return arr
 import copy
 
 def bubble_sort(arr):
