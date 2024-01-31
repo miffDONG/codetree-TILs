@@ -1,25 +1,25 @@
 import copy
 
 def bubble_sort(arr):
-    a = copy.deepcopy(arr)
+    # a = copy.deepcopy(arr)
     sorted = True
     length = len(arr)
     cycle = 1
     for i in range(length-cycle):
-      if a[i] > a[i+1]:
-        a[i] , a[i+1] = a[i+1] , a[i]
+      if arr[i] > arr[i+1]:
+        arr[i] , arr[i+1] = arr[i+1] , arr[i]
         sorted = False  
     cycle += 1
 
     while sorted == False:
       sorted = True
       for i in range(length-cycle):
-        if a[i] > a[i+1]:
-          a[i] , a[i+1] = a[i+1] , a[i]
+        if arr[i] > arr[i+1]:
+          arr[i] , arr[i+1] = arr[i+1] , arr[i]
           sorted = False
       cycle+=1
 
-    return a
+    return arr
 
 
 n = int(input())
