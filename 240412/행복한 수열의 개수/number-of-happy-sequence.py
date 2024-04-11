@@ -9,7 +9,7 @@ for _ in range(n):
             answer+=1
             break
             
-for cow in zip(*board):
+for cow in board:
     for i in range(n-m+1):
         if cow[i:i+m].count(cow[i]) == m:
             answer+=1
