@@ -36,7 +36,7 @@ for i in range(n):
             count+=1
         if high < count: 
             high = count
-        if high > m:
+        if high >= m:
             happy_count+=1
             break 
 
