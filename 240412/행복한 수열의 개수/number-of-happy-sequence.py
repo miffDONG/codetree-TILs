@@ -1,43 +1,24 @@
-n,m = map(int,input().split())
-li = [list(map(int, input().split())) for _ in range(n)]
+import sys
+sys.stdin=open('input.txt','r')
 
-happy_count = 0
+if __name__=="__main__":
+    n,m=map(int,input().split())
+    li = []
+    happy_count = 0
+    # 첫 row 입력을 받는 for문을 지나치지 않고 활용.
+    for _ in range(n):
+        row = list(map(int,input().split()))
+        li.append(row)
+        for i in range(n-m+1):
+            if row[i:i+m].count(row[i]) == m:
+                happy_count+=1
+                break
 
-for i in li:
-    continue_num = 0
-    count = 1
-    high = 1
-    for j in i:
-        if continue_num == 0:
-            continue_num = j
-        elif continue_num != j:
-            continue_num = j
-            count = 1
-        elif continue_num == j:
-            count+=1
-        if high < count: 
-            high = count
-        if high >= m:
-            happy_count+=1
-            break
-    
-for i in range(n):
-    continue_num = 0
-    count = 1
-    high = 1
-    for j in range(n):
-        now_num = li[j][i]
-        if continue_num == 0:
-            continue_num = now_num
-        elif continue_num != now_num:
-            continue_num = now_num
-            count = 1
-        elif continue_num == now_num:
-            count+=1
-        if high < count: 
-            high = count
-        if high >= m:
-            happy_count+=1
-            break 
+    # zip을 통한 
+    for cow in zip(*li):
+        for i in range(n-m+1):
+            if cow[i:i+m].count(cow[i]) == m:
+                happy_count+=1
+                break
 
-print(happy_count)
+    print(happy_count)
